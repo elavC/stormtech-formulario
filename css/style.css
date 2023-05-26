@@ -148,3 +148,7 @@ button {
     flex-direction: column;
     width: 80%;
 }
+
+#data-nascimento, #data-emmissao-rg {
+    width: 100%;
+}
