@@ -34,6 +34,11 @@ function backPage() {
         currentIndex--;
     }
 
+    if (currentIndex != max) {
+        send.style.display = 'none';
+        next.style.display = 'block';
+    }
+
     card[currentIndex].classList.add("selected");
 };
 

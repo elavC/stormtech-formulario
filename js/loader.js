@@ -10,14 +10,14 @@ const loopInterval = ( callBack, numberOfLoop, delay ) => {
   let counter = 0;
   let i = setInterval( ()=> {
       callBack([counter, numberOfLoop]);
-      let result = counter += 25;
+      let result = counter += 15;
 
       imgRelampago.style.opacity = '1';
       
       if(result === numberOfLoop ) clearInterval(i);
       imgRelampago.style.marginLeft = `${-100 + result}%`;
       
-      if(result >= 125) {
+      if(result >= 100) {
           wrapper.style.display = "none";
           form.style.display = "flex";
         }
@@ -25,4 +25,4 @@ const loopInterval = ( callBack, numberOfLoop, delay ) => {
 };
 
 const runThisFunctionAsCallBack = ( x ) => console.log(x);
-loopInterval( runThisFunctionAsCallBack, 125, 600 );
+loopInterval( runThisFunctionAsCallBack, 120, 300 );
