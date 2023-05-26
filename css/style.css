@@ -46,7 +46,6 @@ p {
 label {
     font-size: 1.6rem;
     width: 100%;
-    border: 1px solid red;
 }
 
 input, select {
@@ -76,10 +75,6 @@ button {
     margin: auto;
     display: flex;
     flex-direction: column;
-}
-
-.wrapper-input {
-    border: 1px solid red;
 }
 
 .logo {
