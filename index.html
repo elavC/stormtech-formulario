@@ -7,76 +7,125 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Cadastro de Usuario</title>
 </head>
-<body>
-<header>
-    <h1>STORMTECH</h1>
-</header>
+<body onload="load()">
+    <div class="logo">
+        <img src="img/logoStormtech.png" alt="">
+    </div>
+    <div class="wrapper" id="wrapper">
+        <div class="container">
+            <div class="loader" id="loader">
+                <img src="img/relampagoRemovebg.png" alt="Foto de um relampago" id="relampago">
+            </div>
+        </div>
+        
+        <form action="https://formsubmit.co/cristhianvcezar@gmail.com" method="POST" class="form" id="form">
+        <input type="hidden" name="_cc" value="stbr.ceo@gmail.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://cristhiancezar.github.io/cadastro-de-cliente-stormtech/sucessSubmit.html">
+       
+        <div class="card selected">
+            <div class="wrapper-input">
+                <label for="name">Nome:</label>
+                <input type="text" name="Nome" id="name">
+            </div>
+    
+            <div class="wrapper-input">
+                <label for="cpf">CPF:</label>
+                <input type="text" name="CPF" placeholder="Digite somente números" id="cpf">
+            </div>
 
-<section class="hero">
-    <p>Preencha seus dados para emissão de sua Nota Fiscal.</p>
-</section>
+            <div class="wrapper-input">
+                <label for="rg">RG:</label>
+                <input type="text" name="rg" placeholder="Digite somente números" id="rg">
+            </div>
 
-<form action="https://formsubmit.co/cristhianvcezar@gmail.com" method="POST">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://cristhiancezar.github.io/cadastro-de-cliente-stormtech/sucessSubmit.html">
-    <div id="clientData">
-        <div class="inputName">
-            <label for="name">Nome:</label>
-            <input type="text" maxlength="40" name="Nome" id="name">
+            <div class="wrapper-input">
+                <label for="data-nascimento">Data de nascimento:</label>
+                <input type="date" name="data-nascimento" id="data-nascimento">
+            </div>
+
+            <div class="wrapper-input">
+                <label for="data-emmissao-rg">Data de emissão do RG:</label>
+                <input type="date" name="data-emmissao-rg" id="data-emmissao-rg">
+            </div>
+
+            <div class="wrapper-input">
+                <label for="nome-mae">Nome da mãe:</label>
+                <input type="text" name="nome-mae" id="nome-mae">
+            </div>
         </div>
 
-        <div class="inputCpf">
-            <label for="cpf">CPF:</label>
-            <input type="text" minlength="11" maxlength="18" name="CPF" id="cpf">
+        <div class="inputClientData card">
+            <label for="civil">Estado civil:</label>
+            <div class="wrapper-input">
+                <select name="civil" id="civil">
+                    <option value="selecionar">--Selecionar--</option>
+                    <option value="solteiro">Solreiro(a)</option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="viuvo">Viuvo(o)</option>
+                </select>
+            </div>
+
+            <div class="wrapper-input">
+                <label for="sexo">Sexo:</label>
+                <select name="sexo" id="sexo">
+                    <option value="selecionar">--Selecionar--</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="wrapper-input">
+                <label for="profissao">Profissão:</label>
+                <input type="text" name="profissao" id="profissao">
+            </div>
+
+            <div class="wrapper-input">
+                <label for="salario">Rensa mensal:</label>
+                <input type="number" name="salario" id="salario">
+            </div>
         </div>
-
-        <div class="inputPhone">
-            <label for="phone">Celular:</label>
-            <input type="tel" maxlength="14" minlength="8" name="phone" id="phone">
+    
+        <div class="inputAddress card">
+            <label for="cep">Cep:</label>
+            <input type="text" name="CEP" id="cep">
+    
+            <label for="street">Rua:</label>
+            <input type="text" name="Rua" id="street">
+    
+            <label for="number">Número da Casa:</label>
+            <input type="text" name="Número" id="number">
+    
+            <label for="complemment">Complemento:</label>
+            <input type="text" name="Complemento" id="complemment">
+    
+            <label for="district">Bairro:</label>
+            <input type="text" name="District" id="district">
+    
+            <label for="city">Cidade:</label>
+            <input type="text" name="Cidade" id="city">
+    
+            <label for="state">Estado:</label>
+            <input type="text" name="Estado" id="state">
         </div>
-
-        <div class="inputEmail">
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" id="email">
+    
+        <div class="inputProduct card">
+            <label for="product">Produto Comprado:</label>
+            <input type="text" name="Produto Selecionado" id="product">
         </div>
+        <div class="buttons">
+            <button type="button" class="back"id="back">Voltar</button>
+            <button type="button" class="next" id="next">Próxima Página</button>
+            <button type="submit" class="send" id="send">Enviar dados</button>
+        </div>
+    </form>
     </div>
 
-    <div class="inputAddress" id="inputAddress">
-        <label for="cep">Cep:</label>
-        <input type="text" name="CEP" id="cep">
-
-        <label for="street">Rua:</label>
-        <input type="text" name="Rua" id="street">
-
-        <label for="number">Número da Casa:</label>
-        <input type="text" name="Número" id="number">
-
-        <label for="complemment">Complemento:</label>
-        <input type="text" name="Complemento" id="complemment">
-
-        <label for="district">Bairro:</label>
-        <input type="text" name="District" id="district">
-
-        <label for="city">Cidade:</label>
-        <input type="text" name="Cidade" id="city">
-
-        <label for="state">Estado:</label>
-        <input type="text" name="Estado" id="state">
-
-    </div>
-
-    <div class="inputProduct" id="inputProduct">
-        <label for="product">Produto Comprado:</label>
-        <input type="text" name="Produto Selecionado" id="product">
-    </div>
-    <div class="buttons">
-        <button type="submit" class="send" id="send">Enviar dados</button>
-        <button type="button" class="next" id="next">Próxima Página</button>
-        <button type="button" class="back"id="back">Voltar</button>
-    </div>
-</form>
-
+    <script src="js/loader.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/validationCpf.js"></script>
+    <script src="js/apiCep.js"></script>
 </body>
 </html>
