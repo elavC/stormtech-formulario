@@ -25,4 +25,4 @@ const loopInterval = ( callBack, numberOfLoop, delay ) => {
 };
 
 const runThisFunctionAsCallBack = ( x ) => console.log(x);
-loopInterval( runThisFunctionAsCallBack, 125, 1000 );
+loopInterval( runThisFunctionAsCallBack, 125, 600 );
