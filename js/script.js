@@ -2,17 +2,17 @@ let currentIndex = 0;
 let card = document.getElementsByClassName('card');
 const max = card.length;
 
-console.log(max);
-
 const next = document.getElementById('next');
 const back = document.getElementById('back');
 const send = document.getElementById('send');
+
+let nome = document.getElementById('name');
 
 function nextPage() {
 
     card[currentIndex].classList.remove("selected");
 
-    currentIndex++;
+        currentIndex++;
 
     if(currentIndex == max - 1) {
         next.style.display = 'none';
@@ -43,4 +43,4 @@ function backPage() {
 };
 
 next.addEventListener('click', nextPage);
-back.addEventListener('click', backPage)
+back.addEventListener('click', backPage);

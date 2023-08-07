@@ -7,16 +7,11 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Cadastro de Usuario</title>
 </head>
-<body onload="load()">
+<body>
     <div class="logo">
         <img src="img/logoStormtech.png" alt="">
     </div>
     <div class="wrapper" id="wrapper">
-        <div class="container">
-            <div class="loader" id="loader">
-                <img src="img/relampagoRemovebg.png" alt="Foto de um relampago" id="relampago">
-            </div>
-        </div>
         
         <form action="https://formsubmit.co/cristhianvcezar@gmail.com" method="POST" class="form" id="form">
         <input type="hidden" name="_cc" value="elavtyler@gmail.com">
@@ -25,25 +20,36 @@
 
         <div class="card selected">
             <label for="name">Nome:</label>
-            <input type="text" name="Nome" id="name">
-
-            <label for="cpf">CPF:</label>
-            <input type="text" name="CPF" placeholder="Digite somente números" id="cpf">
-        
-            <label for="data-nascimento">Data de nascimento:</label>
-            <input type="date" name="data-nascimento" id="data-nascimento">
-
-            <label for="rg">RG:</label>
-            <input type="text" name="rg" placeholder="Digite somente números" id="rg">
-
-            <label for="data-emmissao-rg">Data de emissão do RG:</label>
-            <input type="date" name="data-emmissao-rg" id="data-emmissao-rg">
-
-            <label for="nome-mae">Nome da mãe:</label>
-            <input type="text" name="nome-mae" id="nome-mae">
+            <input type="text" name="Nome" id="name" class="inside">
         </div>
 
-        <div class="inputClientData card">
+        <div class="card">
+            <label for="cpf">CPF:</label>
+            <input type="text" name="CPF" placeholder="Digite somente números" id="cpf" class="inside">
+        </div>
+
+        <div class="card">
+            <label for="data-nascimento">Data de nascimento:</label>
+            <input type="date" name="data-nascimento" id="data-nascimento" class="inside">
+        </div>
+
+        <div class="card">
+            <label for="rg">RG:</label>
+            <input type="text" name="rg" placeholder="Digite somente números" id="rg" class="inside">
+        </div>
+
+        <div class="card">
+            <label for="data-emmissao-rg">Data de emissão do RG:</label>
+            <input type="date" name="data-emmissao-rg" id="data-emmissao-rg" class="inside">
+        </div>
+
+        <div class="card">
+            <label for="nome-mae">Nome da mãe:</label>
+            <input type="text" name="nome-mae" id="nome-mae" class="inside">
+        </div>
+        
+
+        <div class="card">
             <label for="civil">Estado civil:</label>
             <select name="civil" id="civil">
                 <option value="selecionar">--Selecionar--</option>
@@ -51,7 +57,9 @@
                 <option value="casado">Casado(a)</option>
                 <option value="viuvo">Viuvo(o)</option>
             </select>
+        </div>
 
+        <div class="card">
             <label for="sexo">Sexo:</label>
             <select name="sexo" id="sexo">
                 <option value="selecionar">--Selecionar--</option>
@@ -59,47 +67,73 @@
                 <option value="feminino">Feminino</option>
                 <option value="outros">Outros</option>
             </select>
+        </div>
 
+        <div class="card">
             <label for="profissao">Profissão:</label>
             <input type="text" name="profissao" id="profissao">
+        </div>
 
-            <label for="salario">Rensa mensal:</label>
+        <div class="card">
+            <label for="salario">Renda mensal:</label>
             <input type="number" name="salario" id="salario">
         </div>
-    
-        <div class="inputAddress card">
+
+        <div class="card">
             <label for="cep">Cep:</label>
             <input type="text" name="CEP" id="cep">
-    
+        </div>
+
+        <div class="card">
             <label for="street">Rua:</label>
             <input type="text" name="Rua" id="street">
-    
+        </div>
+
+        <div class="card">
             <label for="number">Número da Casa:</label>
             <input type="text" name="Número" id="number">
+        </div>
+        
     
+    
+        <div class="card">
             <label for="complemment">Complemento:</label>
             <input type="text" name="Complemento" id="complemment">
-    
+        </div>
+
+        <div class="card">
             <label for="district">Bairro:</label>
             <input type="text" name="District" id="district">
-    
+        </div>
+
+        <div class="card">
             <label for="city">Cidade:</label>
             <input type="text" name="Cidade" id="city">
-    
+        </div>
+
+        <div class="card">
             <label for="state">Estado:</label>
             <input type="text" name="Estado" id="state">
         </div>
+
+
     
-        <div class="inputProduct card">
+        <div class="card">
             <label for="phone-1">Celular:</label>
             <input type="text" name="phone-1" id="phone-1">
+        </div>
 
+        <div class="card">
             <label for="telefone">Telefone:</label>
             <input type="text" name="telefone" id="telefone">
+        </div>
 
+        <div class="card">
             <label for="email">E-mail:</label>
             <input type="email" name="email" id="email">
-            
+        </div>
+
+        <div class="card">
             <label for="operadora">Operadora:</label>
             <select name="operadora" id="0peradora">
                 <option value="selecionar">--Selecionar--</option>
@@ -109,9 +143,10 @@
                 <option value="claro">Claro</option>
             </select>
         </div>
+
         <div class="buttons">
-            <button type="button" class="back"id="back">Voltar</button>
-            <button type="button" class="next" id="next">Próxima Página</button>
+            <button type="button" class="back" id="back">Voltar</button>
+            <button type="button" class="next" id="next" >Próximo</button>
             <button type="submit" class="send" id="send">Enviar dados</button>
         </div>
     </form>
